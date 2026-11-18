@@ -1,0 +1,79 @@
+/* Hospitra design tokens — "Clinical Cyber Operations" */
+:root {
+  color-scheme: dark;
+
+  /* Foundation: deep navy + graphite */
+  --bg: #0a111d;
+  --bg-sidebar: #0c1522;
+  --panel: #101b2b;
+  --panel-2: #142236;
+  --panel-3: #192a41;
+  --hover: #1b2d46;
+  --border: #1e2f45;
+  --border-strong: #2b4260;
+  --overlay: rgba(4, 9, 16, 0.66);
+
+  /* Text */
+  --text: #e2e9f3;
+  --text-muted: #94a6bd;
+  --text-dim: #63768f;
+  --text-inverse: #061019;
+
+  /* Healthy / primary: cyan-teal */
+  --accent: #2cc5cc;
+  --accent-strong: #19a9b1;
+  --accent-soft: rgba(44, 197, 204, 0.12);
+  --accent-line: rgba(44, 197, 204, 0.38);
+
+  /* Semantic */
+  --ok: #34c796;
+  --ok-soft: rgba(52, 199, 150, 0.13);
+  --warn: #f0b03f;
+  --warn-soft: rgba(240, 176, 63, 0.13);
+  --danger: #f2495f;
+  --danger-soft: rgba(242, 73, 95, 0.14);
+  --neutral: #7d8da3;
+  --neutral-soft: rgba(125, 141, 163, 0.14);
+  --info: #6f9fe8;
+  --info-soft: rgba(111, 159, 232, 0.13);
+  --sim: #a593ff;
+  --sim-soft: rgba(165, 147, 255, 0.12);
+
+  /* Severity scale (always paired with text + bar glyph) */
+  --sev-low: #3fbfa6;
+  --sev-moderate: #e9b43f;
+  --sev-high: #f27b3a;
+  --sev-critical: #f2495f;
+
+  /* Typography */
+  --font: "Segoe UI Variable Text", "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+  --font-display: "Segoe UI Variable Display", "Segoe UI", system-ui, sans-serif;
+  --mono: "Cascadia Mono", "Cascadia Code", Consolas, ui-monospace, "SFMono-Regular", Menlo, monospace;
+  --fs-xs: 11px;
+  --fs-sm: 12px;
+  --fs-base: 13px;
+  --fs-md: 14px;
+  --fs-lg: 16px;
+  --fs-xl: 20px;
+  --fs-2xl: 26px;
+
+  /* Spacing scale (4px base) */
+  --s1: 4px;
+  --s2: 8px;
+  --s3: 12px;
+  --s4: 16px;
+  --s5: 20px;
+  --s6: 24px;
+  --s8: 32px;
+
+  --radius-sm: 4px;
+  --radius: 6px;
+  --radius-lg: 10px;
+
+  --shadow-pop: 0 18px 48px rgba(0, 0, 0, 0.45), 0 2px 6px rgba(0, 0, 0, 0.35);
+  --focus: 0 0 0 2px var(--bg), 0 0 0 4px var(--accent);
+
+  --sidebar-w: 236px;
+  --topbar-h: 60px;
+  --drawer-w: 560px;
+}

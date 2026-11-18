@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hospitra — Security Command Centre</title>
+  <meta name="description" content="Hospitra: Hospital Network Security & Risk Monitoring Platform.">
+  <link rel="icon" href="/img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/css/tokens.css">
+  <link rel="stylesheet" href="/css/base.css">
+  <link rel="stylesheet" href="/css/layout.css">
+  <link rel="stylesheet" href="/css/components.css">
+  <link rel="stylesheet" href="/css/views.css">
+</head>
+<body>
+  <div class="shell">
+    <aside class="sidebar" aria-label="Application navigation">
+      <div class="brand">
+        <svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true">
+          <path d="M20 3l14 5v10c0 9-6 16.5-14 19C12 34.5 6 27 6 18V8z" fill="#122339" stroke="#2cc5cc" stroke-width="2"/>
+          <path d="M11 21h5l2.5-6 4 11 2.5-5H30" fill="none" stroke="#2cc5cc" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <div>
+          <div class="brand-name">Hospitra</div>
+          <div class="brand-sub">Network Security &amp;<br>Risk Monitoring</div>
+        </div>
+      </div>
+      <nav class="nav" id="nav" aria-label="Primary"></nav>
+      <div class="sidebar-foot">
+        <div class="conn" id="conn-status" data-state="connecting" title="Live update channel (WebSocket)">
+          <span class="conn-dot" aria-hidden="true"></span>
+          <span class="label" id="conn-label">Live updates: connecting…</span>
+        </div>
+        <div class="operator" title="Signed-in user">
+          <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM4 21a8 8 0 0 1 16 0"/></svg></span>
+          <span class="label mono" id="sidebar-user">—</span>
+        </div>
+      </div>
+    </aside>
+
+    <div class="main-col">
+      <header class="topbar">
+        <div class="page-heading">
+          <h1 id="page-title">Hospitra</h1>
+          <p id="page-subtitle"></p>
+        </div>
+        <div class="topbar-actions">
+          <label class="context-select" for="branch-context">
+            <span>Context</span>
+            <select id="branch-context" class="select" aria-label="Branch context">
+              <option value="">All branches</option>
+            </select>
+          </label>
+          <a class="btn btn-primary" href="#/monitoring?simulate=1" id="run-scenario-link" hidden>
+            <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 3h6M10 3v6L4 19a1 1 0 0 0 .9 1.5h14.2A1 1 0 0 0 20 19l-6-10V3"/></svg></span>
+            Run scenario
+          </a>
+          <div class="user-menu" id="user-menu"></div>
+        </div>
+      </header>
+      <main id="view" class="view" tabindex="-1" aria-live="off"></main>
+    </div>
+  </div>
+
+  <div id="auth-root" hidden></div>
+  <div id="drawer-root"></div>
+  <div id="modal-root"></div>
+  <div id="toast-root" class="toast-root" role="status" aria-live="polite"></div>
+
+  <noscript>
+    <div style="padding:24px;color:#fff">Hospitra requires JavaScript to run the operator interface.</div>
+  </noscript>
+
+  <script src="/vendor/chart.umd.js"></script>
+  <script type="module" src="/js/app.js"></script>
+</body>
+</html>

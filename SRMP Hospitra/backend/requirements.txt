@@ -1,0 +1,13 @@
+# Hospitra backend dependencies (pinned to the versions verified during development)
+fastapi==0.163.1
+starlette==1.10.0
+uvicorn==0.54.0
+websockets==17.4
+pydantic==2.14.3
+SQLAlchemy==2.0.57
+alembic==1.20.1
+# PDF report generation (exports/summary.pdf)
+reportlab==4.5.1
+# Testing
+pytest==8.4.2
+httpx==0.28.1
